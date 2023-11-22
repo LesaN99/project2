@@ -73,7 +73,7 @@ main {
 
 .current-temperature-icon {
   position: relative;
-  top: -50px;
+  top: 50px;
   font-size: 40px;
   margin-right: 10px;
 }

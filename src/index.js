@@ -1,8 +1,19 @@
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = response.data.main.temp;
-  let temperature = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = response.data.temperature.current;
+  let temperature = Math.round(response.data.temperature.current);
+  let cityElement=document.querySelector("#current-city");
+  let descriptionElement=document.querySelector("#description");
+  let humidityElement=document.querySelector("#humidity");
+  let windSpeedElement=document.querySelector("#wind-speed");
+  let iconElement=document.querySelector("#icon");
+  
+  windSpeedElement.innerHTML=`${response.data.wind.speed}km/h`;
+  humidityElement.innerHTML=`${response.data.temperature.humidity}%`;
+  descriptionElement.innerHTML=response.data.condition.description;
+  cityElement.innerHTML=response.data.city;
   temperatureElement.innerHTML = temperature;
+  iconElement.innerHTML = ` <img src="${response.data.condition.icon_url}" class="current-temperature-icon`;
 }
 
 function search(event) {
@@ -44,8 +55,8 @@ function formatDate(date) {
     "Saturday"
   ];
 
-  let searchForm = document.querySelector("#search-form");
-  searchForm.addEventListener("submit", search);
+  let searchFormElement = document.querySelector("#search-form");
+  searchFormElement.addEventListener("submit", search);
 
   let formattedDay = days[day];
   return `${formattedDay} ${hours}:${minutes}`;

@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #808080;
+  color: #3F00FF;
 }
 
 .weather-app {
@@ -47,8 +47,7 @@ main {
 }
 
 .current-temperature {
-  display: flex;
-  justify-content: space-between;
+  font-size: 48px;
 }
 
 .current-weather {
@@ -73,21 +72,22 @@ main {
 }
 
 .current-temperature-icon {
-  width: 88px;
-  height: 88px;
+  position: relative;
+  top: -8px;
+  font-size: 40px;
+  margin-right: 10px;
 }
 
 .current-temperature-value {
-  font-size: 88px;
+  font-size: 80px;
   font-weight: bold;
-  line-height: 1px;;
 }
 
 .current-temperature-unit {
-  margin-top: 6px;
   font-size: 28px;
+  position: relative;
+  top: -38px;
 }
-
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;

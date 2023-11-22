@@ -10,11 +10,15 @@ function search(event) {
   let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
   let city = searchInputElement.value;
-  let apiKey = `2513f3c728b1b5ff4f4347e1a6af22b8`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  cityElement.innerHTML = city;
+  searchCity=(searchInputElement.value);
+}
+
+function searchCity(city) {
+  let apiKey = `b84t25o8a0135e98cd308e694fb54fb7`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
-  cityElement.innerHTML = city;
 }
 
 function formatDate(date) {
@@ -51,3 +55,5 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+searchCity("johannesburg");

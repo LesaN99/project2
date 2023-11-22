@@ -14,7 +14,8 @@ function showTemperature(response) {
   descriptionElement.innerHTML=response.data.condition.description;
   cityElement.innerHTML=response.data.city;
   temperatureElement.innerHTML = temperature;
-  iconElement.innerHTML = ` <img src="${response.data.condition.icon_url}" class="current-temperature-icon`;
+  iconElement.innerHTML = ` <img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
+
 }
 
 function search(event) {
@@ -23,7 +24,7 @@ function search(event) {
   let cityElement = document.querySelector("#current-city");
   let city = searchInputElement.value;
   cityElement.innerHTML = city;
-  searchCity=(searchInputElement.value);
+  searchCity = (searchInputElement.value);
 }
 
 function searchCity(city) {
@@ -63,9 +64,9 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
+searchCity("Johannesburg");
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-searchCity("johannesburg");

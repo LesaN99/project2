@@ -9,7 +9,7 @@ function showTemperature(response) {
   let iconElement=document.querySelector("#icon");
 
   cityElement.innerHTML=response.data.city;
-  windSpeedElement.innerHTML=`${response.data.wind.speed}km/h`;
+  windSpeedElement.innerHTML=`${response.data.wind.speed}m/s`;
   humidityElement.innerHTML=`${response.data.temperature.humidity}%`;
   descriptionElement.innerHTML=response.data.condition.description;
   temperatureElement.innerHTML = temperature;

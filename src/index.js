@@ -24,7 +24,6 @@ function search(event) {
   let cityElement = document.querySelector("#current-city");
   let city = searchInputElement.value;
   cityElement.innerHTML = city;
-  searchCity = (searchInputElement.value);
 }
 
 function searchCity(city) {

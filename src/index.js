@@ -9,12 +9,12 @@ function showTemperature(response) {
   let iconElement=document.querySelector("#icon");
 
   cityElement.innerHTML=response.data.city;
-  windSpeedElement.innerHTML=`${response.data.wind.speed}m/s`;
+  windSpeedElement.innerHTML=`${response.data.wind.speed}km/h`;
   humidityElement.innerHTML=`${response.data.temperature.humidity}%`;
   descriptionElement.innerHTML=response.data.condition.description;
   temperatureElement.innerHTML = temperature;
   iconElement.innerHTML = ` <img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
-
+ 
 }
 
 function search(event) {
@@ -24,6 +24,7 @@ function search(event) {
   let city = searchInputElement.value;
   cityElement.innerHTML = city;
   searchCity = (searchInputElement.value);
+  
 }
 
 function searchCity(city) {

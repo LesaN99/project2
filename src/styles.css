@@ -1,14 +1,16 @@
 body {
-  background: #fff;
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/127/original/abstract-pastel-colorful-gradient-background-concept-free-vector.jpg?1701095320);
+ background-size: cover;
   font-family: "Roboto", sans-serif;
 }
 
 a {
-  color: #3F00FF;
+  color: #EC50AB
 }
 
 .weather-app {
-  background: #FCFbF4;
+  background: #F7DFE5;
+  opacity: 0.7;
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
@@ -68,7 +70,7 @@ main {
 }
 
 .current-details strong {
-  color: #3F00FF;
+  color: #EC50AB;
 }
 
 .current-temperature-icon {

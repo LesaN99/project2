@@ -116,10 +116,11 @@ footer {
 
 .weather-forecast-temperatures {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 
-.weather-forecast-temperature-minimum {
+.weather-forecast-temperature-min {
   opacity: 0.5;
 }
 

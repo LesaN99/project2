@@ -44,6 +44,17 @@ header {
   border-radius: 5px;
 }
 
+.magnifying-icon {
+  color: rgba(39, 33, 66, 0.4);
+  position: relative;
+  right: -25px;
+}
+
+.magnifying-icon,
+.search-input{
+  padding-left: 25px;
+}
+
 main {
   padding: 30px 0;
 }
